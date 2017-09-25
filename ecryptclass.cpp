@@ -136,13 +136,6 @@ void EcryptClass::FillBlock(const QByteArray str, DES_cblock &block)
 void EcryptClass::FillQString(const DES_cblock &block, QByteArray &str)
 {
     str.clear();
-//    char single_char;
-//    for (int i=0;i<8;i++)
-//    {
-//        single_char = (char)block[i];
-//        str.append(single_char);
-//    }
-//    str.append('\0');
     str.setRawData((char*)block,8);
 }
 
